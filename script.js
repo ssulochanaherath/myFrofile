@@ -7,7 +7,7 @@ function typeEffect() {
     if (i < text.length) {
         nameElement.textContent += text.charAt(i);
         i++;
-        setTimeout(typeEffect, 80);
+        setTimeout(typeEffect, 60);
     }
 }
 typeEffect();
@@ -18,10 +18,11 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.add('show');
         }
     });
+}, {
+    threshold: 0.2
 });
 
-const sections = document.querySelectorAll('section');
-sections.forEach(section => {
-    section.classList.add('hidden');
+const fadeSections = document.querySelectorAll('.fade-in');
+fadeSections.forEach(section => {
     observer.observe(section);
 });
