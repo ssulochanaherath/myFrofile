@@ -17,23 +17,38 @@ body {
     padding: 0 1.5rem;
 }
 
+.header-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 header {
     background: linear-gradient(135deg, #181818, #111111);
     padding: 5rem 2rem;
-    text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-header h1 {
+.header-content h1 {
     font-size: 3.5rem;
     color: #00ffe1;
     animation: fadeInDown 1s ease;
 }
 
-header p {
+.header-content p {
     font-size: 1.2rem;
     margin-top: 1rem;
     color: #bbb;
+}
+
+.header-photo img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .section-title {
@@ -143,4 +158,46 @@ footer {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.contact-form {
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00ffe1;
+}
+
+.contact-form button {
+    padding: 1rem;
+    border: none;
+    background-color: #00ffe1;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #00d4c1;
 }
