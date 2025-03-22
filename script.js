@@ -61,7 +61,7 @@ projectItems.forEach(item => {
             images[nextIndex].classList.add("active");
         };
 
-        const intervalId = setInterval(changeImages, 500);
+        const intervalId = setInterval(changeImages, 800);
 
         item.addEventListener('mouseleave', () => {
             clearInterval(intervalId);
