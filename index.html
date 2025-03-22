@@ -6,55 +6,128 @@
     <title>Sangeeth Sulochana - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
 <header>
     <div class="container header-flex">
         <div class="header-content">
-            <h1>Sangeeth Sulochana</h1>
+            <h1 class="typewriter-text">Sangeeth Sulochana</h1>
             <p>Software Engineering Student · UI/UX Enthusiast</p>
         </div>
         <div class="header-photo">
-            <img src="assets/Sangeeth.jpg" alt="Sangeeth Sulochana Photo" />
+            <img src="assets/minec.jpg" alt="Sangeeth Sulochana Photo" />
         </div>
     </div>
 </header>
 
+<!-- Navigation Bar -->
+<nav id="navbar">
+    <div class="navbar-container">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-photo">
+            <a href="#top">
+                <img src="assets/minec.jpg" alt="Sangeeth Sulochana Photo" />
+            </a>
+        </div>
+    </div>
+</nav>
+
+
 <main>
-    <section class="fade-in">
+    <section id="about" class="fade-in">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            Hello! I'm Sangeeth Sulochana, a passionate software engineering student with a love for UI/UX design.
+            I specialize in creating user-friendly and visually appealing interfaces. I enjoy working on frontend technologies
+            like React, CSS, and JavaScript, and I have experience with backend technologies like Node.js and MySQL.
+            I believe in creating seamless user experiences through thoughtful design and clean code.
+        </p>
+    </section>
+
+    <section id="technologies" class="fade-in">
         <h2 class="section-title">Technologies & Languages</h2>
         <div class="tech-list">
-            <div class="tech-item">HTML5</div>
-            <div class="tech-item">CSS3</div>
-            <div class="tech-item">JavaScript</div>
-            <div class="tech-item">React</div>
-            <div class="tech-item">Node.js</div>
-            <div class="tech-item">MySQL</div>
-            <div class="tech-item">Redux</div>
-            <div class="tech-item">Prisma</div>
+            <!-- Existing technologies -->
+            <div class="tech-item">
+                <i class="fab fa-html5 fa-3x"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-css3-alt fa-3x"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-js-square fa-3x"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-react fa-3x"></i>
+                <p>React</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-node fa-3x"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-git-alt fa-3x"></i>
+                <p>Git</p>
+            </div>
+
+            <div class="tech-item">
+                <i class="fas fa-code fa-3x"></i>
+                <p>TypeScript</p>
+            </div>
+            <div class="tech-item">
+                <i class="fab fa-react fa-3x"></i>
+                <p>React Native</p>
+            </div>
+            <div class="tech-item">
+                <i class="fas fa-database fa-3x"></i>
+                <p>MySQL</p>
+            </div>
         </div>
     </section>
 
-    <section class="fade-in">
+    <section id="projects" class="fade-in">
         <h2 class="section-title">My Projects</h2>
         <div class="project-list">
             <div class="project-item">
-                <img src="your_project_preview1.jpg" alt="Project 1 Preview">
+                <div class="image-slider">
+                    <img src="assets/p2.jpg" alt="Project 1 Preview" class="slider-image">
+                    <img src="assets/p1.jpg" alt="Project 1 Preview" class="slider-image">
+                    <img src="your_project_preview3.jpg" alt="Project 1 Preview" class="slider-image">
+                </div>
                 <a href="https://github.com/yourusername/project1" target="_blank">View Project 1</a>
             </div>
             <div class="project-item">
-                <video src="your_project_preview2.mp4" controls></video>
+                <div class="image-slider">
+                    <img src="your_project_preview4.jpg" alt="Project 2 Preview" class="slider-image">
+                    <img src="your_project_preview5.jpg" alt="Project 2 Preview" class="slider-image">
+                    <img src="your_project_preview6.jpg" alt="Project 2 Preview" class="slider-image">
+                </div>
                 <a href="https://github.com/yourusername/project2" target="_blank">View Project 2</a>
             </div>
             <div class="project-item">
-                <img src="your_project_preview3.jpg" alt="Project 3 Preview">
+                <div class="image-slider">
+                    <img src="your_project_preview7.jpg" alt="Project 3 Preview" class="slider-image">
+                    <img src="your_project_preview8.jpg" alt="Project 3 Preview" class="slider-image">
+                    <img src="your_project_preview9.jpg" alt="Project 3 Preview" class="slider-image">
+                </div>
                 <a href="https://github.com/yourusername/project3" target="_blank">View Project 3</a>
             </div>
         </div>
     </section>
 
-    <section class="fade-in">
+
+
+    <section id="contact" class="fade-in">
         <h2 class="section-title">Contact Me</h2>
         <div class="contact">
             <a href="mailto:your.email@example.com">your.email@example.com</a>
