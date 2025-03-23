@@ -352,6 +352,12 @@ section {
     transform: translateY(0);
 }
 
+main {
+    padding-top: 150px;
+}
 
+section {
+    padding-top: 150px; 
+}
 
 
