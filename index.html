@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sangeeth Sulochana - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Add smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+
 <body>
 
+<!-- Header Section -->
 <header>
     <div class="container header-flex">
         <div class="header-content">
@@ -32,29 +41,28 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="navbar-photo">
-            <a href="#top">
+            <a href="#top" aria-label="Go to top">
                 <img src="assets/minec.jpg" alt="Sangeeth Sulochana Photo" />
             </a>
         </div>
     </div>
 </nav>
 
-
 <main>
+    <!-- About Section -->
     <section id="about" class="fade-in">
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
-            Hello! I'm Sangeeth Sulochana, a passionate software engineering student with a love for UI/UX design.
-            I specialize in creating user-friendly and visually appealing interfaces. I enjoy working on frontend technologies
-            like React, CSS, and JavaScript, and I have experience with backend technologies like Node.js and MySQL.
-            I believe in creating seamless user experiences through thoughtful design and clean code.
+            Hello! I'm Sangeeth Sulochana, a passionate software engineering student with a love for UI/UX design. I
+            specialize in creating user-friendly and visually appealing interfaces. I enjoy working on frontend
+            technologies like React, CSS, and JavaScript, and I have experience with backend technologies like Node.js and MySQL. I believe in creating seamless user experiences through thoughtful design and clean code.
         </p>
     </section>
 
+    <!-- Technologies Section -->
     <section id="technologies" class="fade-in">
         <h2 class="section-title">Technologies & Languages</h2>
         <div class="tech-list">
-            <!-- Existing technologies -->
             <div class="tech-item">
                 <i class="fab fa-html5 fa-3x"></i>
                 <p>HTML5</p>
@@ -79,7 +87,6 @@
                 <i class="fab fa-git-alt fa-3x"></i>
                 <p>Git</p>
             </div>
-
             <div class="tech-item">
                 <i class="fas fa-code fa-3x"></i>
                 <p>TypeScript</p>
@@ -95,16 +102,17 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="fade-in">
         <h2 class="section-title">My Projects</h2>
         <div class="project-list">
             <div class="project-item">
                 <div class="image-slider">
-                    <img src="your_project_preview1.jpg" alt="Project 1 Preview" class="slider-image">
-                    <img src="your_project_preview2.jpg" alt="Project 1 Preview" class="slider-image">
-                    <img src="your_project_preview3.jpg" alt="Project 1 Preview" class="slider-image">
+                    <img src="assets/project1_1.jpg" alt="Project 1 Preview" class="slider-image">
+                    <img src="assets/project1_2.jpg" alt="Project 1 Preview" class="slider-image">
+                    <img src="assets/project1_3.jpg" alt="Project 1 Preview" class="slider-image">
                 </div>
-                <a href="https://github.com/yourusername/project1" target="_blank">View Project 1</a>
+                <a href="https://github.com/yourusername/project1" target="_blank" aria-label="View Project 1 on GitHub">View Project 1</a>
             </div>
             <div class="project-item">
                 <div class="image-slider">
@@ -112,32 +120,31 @@
                     <img src="assets/hotel2.png" alt="Project 2 Preview" class="slider-image">
                     <img src="assets/hotel3.png" alt="Project 2 Preview" class="slider-image">
                 </div>
-                <a href="https://github.com/ssulochanaherath/hotel_booking" target="_blank">Hotel Booking</a>
+                <a href="https://github.com/ssulochanaherath/hotel_booking" target="_blank" aria-label="View Hotel Booking Project">Hotel Booking</a>
             </div>
             <div class="project-item">
                 <div class="image-slider">
-                    <img src="your_project_preview7.jpg" alt="Project 3 Preview" class="slider-image">
-                    <img src="your_project_preview8.jpg" alt="Project 3 Preview" class="slider-image">
-                    <img src="your_project_preview9.jpg" alt="Project 3 Preview" class="slider-image">
+                    <img src="assets/project3_1.jpg" alt="Project 3 Preview" class="slider-image">
+                    <img src="assets/project3_2.jpg" alt="Project 3 Preview" class="slider-image">
+                    <img src="assets/project3_3.jpg" alt="Project 3 Preview" class="slider-image">
                 </div>
-                <a href="https://github.com/yourusername/project3" target="_blank">View Project 3</a>
+                <a href="https://github.com/yourusername/project3" target="_blank" aria-label="View Project 3 on GitHub">View Project 3</a>
             </div>
         </div>
     </section>
 
-
-
+    <!-- Contact Section -->
     <section id="contact" class="fade-in">
         <h2 class="section-title">Contact Me</h2>
         <div class="contact-info">
-            <a href="mailto:your.email@example.com" class="contact-link">
+            <a href="mailto:your.email@example.com" class="contact-link" aria-label="Send an email to Sangeeth">
                 <i class="fas fa-envelope"></i>
                 your.email@example.com
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link" aria-label="LinkedIn Profile">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+            <a href="https://github.com/yourusername" target="_blank" class="contact-link" aria-label="GitHub Profile">
                 <i class="fab fa-github"></i> GitHub
             </a>
         </div>
@@ -149,13 +156,14 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-
 </main>
 
+<!-- Footer -->
 <footer>
     <p>© 2025 Sangeeth Sulochana. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
+
 </html>
