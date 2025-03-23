@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');  
+                entry.target.classList.add('visible');
             } else {
                 entry.target.classList.remove('visible');
             }
@@ -34,12 +34,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 100) {
             navbar.classList.add('show');
         } else {
             navbar.classList.remove('show');
         }
-        lastScrollY = window.scrollY; 
+
+        if (currentScrollY > lastScrollY) {
+        } else {
+            fadeSections.forEach(section => {
+                section.classList.remove('visible');
+            });
+        }
+
+        lastScrollY = currentScrollY;
     });
 
     const projectItems = document.querySelectorAll('.project-item');
