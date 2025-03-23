@@ -1,3 +1,5 @@
+let lastScrollY = window.scrollY;
+
 document.addEventListener('DOMContentLoaded', () => {
     const nameElement = document.querySelector('header h1');
     const text = nameElement.textContent;
@@ -16,55 +18,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('show');
+                entry.target.classList.add('visible');  
+            } else {
+                entry.target.classList.remove('visible');
             }
         });
     }, {
-        threshold: 0.2
+        threshold: 0.2,
     });
 
     const fadeSections = document.querySelectorAll('.fade-in');
     fadeSections.forEach(section => {
         observer.observe(section);
     });
-});
 
-const navbar = document.getElementById('navbar');
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('show');
+        } else {
+            navbar.classList.remove('show');
+        }
+        lastScrollY = window.scrollY; 
+    });
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('show');
-    } else {
-        navbar.classList.remove('show');
-    }
-});
+    const projectItems = document.querySelectorAll('.project-item');
+    projectItems.forEach(item => {
+        const images = item.querySelectorAll('.slider-image');
+        images[0].classList.add("active");
 
-const projectItems = document.querySelectorAll('.project-item');
+        item.addEventListener('mouseenter', () => {
+            let currentIndex = 0;
+            const changeImages = () => {
+                images.forEach((img, index) => {
+                    if (img.classList.contains("active")) {
+                        currentIndex = index;
+                        img.classList.remove("active");
+                    }
+                });
 
-projectItems.forEach(item => {
-    const images = item.querySelectorAll('.slider-image');
+                const nextIndex = (currentIndex + 1) % images.length;
+                images[nextIndex].classList.add("active");
+            };
 
-    images[0].classList.add("active");
+            const intervalId = setInterval(changeImages, 800);
 
-    item.addEventListener('mouseenter', () => {
-        let currentIndex = 0;
-
-        const changeImages = () => {
-            images.forEach((img, index) => {
-                if (img.classList.contains("active")) {
-                    currentIndex = index;
-                    img.classList.remove("active");
-                }
+            item.addEventListener('mouseleave', () => {
+                clearInterval(intervalId);
             });
-
-            const nextIndex = (currentIndex + 1) % images.length;
-            images[nextIndex].classList.add("active");
-        };
-
-        const intervalId = setInterval(changeImages, 800);
-
-        item.addEventListener('mouseleave', () => {
-            clearInterval(intervalId);
         });
     });
 });
