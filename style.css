@@ -383,4 +383,62 @@ section {
     padding-top: 150px; 
 }
 
+/* ============================= */
+/* Education Section Styles      */
+/* ============================= */
+.education-section {
+    background-color: #1c1c1c;
+    padding: 4rem 2rem;
+    color: #f0f0f0;
+}
+
+.education-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00ffe1;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.education-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00ffe1;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.education-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+}
+
+.education-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.education-item h3 {
+    font-size: 1.8rem;
+    color: #00ffe1;
+    margin-bottom: 0.5rem;
+}
+
+.education-item p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
 
