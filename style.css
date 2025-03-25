@@ -275,11 +275,16 @@ section {
 
 .contact-link:hover {
     color: #fff;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .contact-info i {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover i {
+    transform: rotate(10deg);
 }
 
 .contact-form {
@@ -288,56 +293,64 @@ section {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    background: rgba(255, 255, 255, 0.1);
+    gap: 1.5rem;
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-form input,
 .contact-form textarea {
     padding: 1.2rem;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #00ffe1;
+    background-color: rgba(0, 255, 255, 0.2);
+    transform: scale(1.02);
 }
 
 .contact-form button {
     padding: 1.2rem;
     border: none;
-    background-color: #00ffe1;
+    background: linear-gradient(135deg, #00ffe1, #00d4c1);
     color: #111;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 255, 225, 0.3);
 }
 
 .contact-form button:hover {
-    background-color: #00d4c1;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #00d4c1, #00b8a3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 255, 225, 0.4);
 }
 
 .contact-form input,
 .contact-form textarea {
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    background-color: rgba(0, 255, 255, 0.1);
+    background-color: rgba(0, 255, 255, 0.15);
+    border-color: #00ffe1;
 }
 
 /* CSS for fade-in effect */
