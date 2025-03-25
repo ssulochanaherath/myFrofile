@@ -171,7 +171,7 @@ section {
 
 .tech-list, .project-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -275,16 +275,11 @@ section {
 
 .contact-link:hover {
     color: #fff;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .contact-info i {
-    font-size: 1.6rem;
-    transition: transform 0.3s ease;
-}
-
-.contact-link:hover i {
-    transform: rotate(10deg);
+    font-size: 1.5rem;
 }
 
 .contact-form {
@@ -294,63 +289,55 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    padding: 2rem;
-    border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-form input,
 .contact-form textarea {
     padding: 1.2rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 1rem;
     outline: none;
-    transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(8px);
+    transition: border-color 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #00ffe1;
-    background-color: rgba(0, 255, 255, 0.2);
-    transform: scale(1.02);
 }
 
 .contact-form button {
     padding: 1.2rem;
     border: none;
-    background: linear-gradient(135deg, #00ffe1, #00d4c1);
+    background-color: #00ffe1;
     color: #111;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0, 255, 225, 0.3);
 }
 
 .contact-form button:hover {
-    background: linear-gradient(135deg, #00d4c1, #00b8a3);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 255, 225, 0.4);
+    background-color: #00d4c1;
+    transform: translateY(-2px);
 }
 
 .contact-form input,
 .contact-form textarea {
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    background-color: rgba(0, 255, 255, 0.15);
-    border-color: #00ffe1;
+    background-color: rgba(0, 255, 255, 0.1);
 }
 
 /* CSS for fade-in effect */
@@ -476,21 +463,5 @@ section {
 .download-btn:hover {
     background-color: #4e6d5d; /* Darker shade on hover */
 }
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 
 
