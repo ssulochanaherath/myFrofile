@@ -79,3 +79,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project-item");
+    let currentIndex = 0;
+
+    function showProject(index) {
+        projects.forEach((project, i) => {
+            project.classList.remove("active");
+            if (i === index) {
+                project.classList.add("active");
+            }
+        });
+    }
+
+    document.querySelector(".right-btn").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % projects.length;
+        showProject(currentIndex);
+    });
+
+    document.querySelector(".left-btn").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+        showProject(currentIndex);
+    });
+
+    // Show first project on page load
+    showProject(currentIndex);
+});
