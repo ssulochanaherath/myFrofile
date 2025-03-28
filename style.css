@@ -205,54 +205,129 @@ section {
     transform: scale(1.05);
     background-color: rgba(255, 255, 255, 0.08);
 }
-
-/*projects*/
-
-.project-list {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.project-item {
+/* Full-Screen Project Section */
+#projects {
     position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    cursor: pointer;
+    width: 100vw;
+    height: 100vh;
 }
 
-.image-slider {
+/* Project Container */
+.project-container {
     display: flex;
-    width: 100%; /* 3 images in the slider */
-    transition: transform 1s ease-in-out;
-}
-
-.slider-image {
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: none;
+    position: relative;
 }
 
-.slider-image.active {
-    display: block;
+/* Project List */
+.project-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.project-item a {
+/* Individual Project (Full Screen) */
+.project-item {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
 }
 
-.project-item a:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+/* Show Active Project */
+.project-item.active {
+    opacity: 1;
+    position: relative;
 }
+
+/* Image Slider */
+.image-slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0; /* Removed the border-radius */
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire area */
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Show First Image Initially */
+.image-slider img:first-child {
+    opacity: 1;
+}
+
+/* Dark Overlay for Text */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.overlay a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.overlay a:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Navigation Buttons */
+.scroll-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 50%; /* Makes buttons circular */
+}
+
+.left-btn { left: 10px; }
+.right-btn { right: 10px; }
+
 
 
 .contact-info {
@@ -491,102 +566,3 @@ footer {
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-/* Full-Screen Project Section */
-#projects {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Project Container */
-.project-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-/* Project List */
-.project-list {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-/* Individual Project (Full Screen) */
-.project-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-}
-
-/* Show Active Project */
-.project-item.active {
-    opacity: 1;
-    position: relative;
-}
-
-/* Dark Overlay for Text */
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.overlay h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.overlay p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.overlay a {
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.overlay a:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-/* Navigation Buttons */
-.scroll-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 30px;
-    padding: 15px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.left-btn { left: 20px; }
-.right-btn { right: 20px; }
-
-

@@ -105,4 +105,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Show first project on page load
     showProject(currentIndex);
+
+    // Image Slider inside Each Project
+    function startImageSlider() {
+        document.querySelectorAll(".image-slider").forEach(slider => {
+            let images = slider.querySelectorAll("img");
+            let imageIndex = 0;
+            let sliderInterval;
+
+            function showNextImage() {
+                images.forEach(img => img.style.opacity = "0");
+                images[imageIndex].style.opacity = "1";
+                imageIndex = (imageIndex + 1) % images.length;
+            }
+
+            function startSlider() {
+                sliderInterval = setInterval(showNextImage, 2000);
+            }
+
+            function stopSlider() {
+                clearInterval(sliderInterval);
+            }
+
+            // Start the slider when the cursor enters
+            slider.addEventListener("mouseenter", startSlider);
+
+            // Stop the slider when the cursor leaves
+            slider.addEventListener("mouseleave", stopSlider);
+
+            // Start the slider immediately on page load
+            startSlider();
+        });
+    }function startImageSlider() {
+        document.querySelectorAll(".image-slider").forEach(slider => {
+            let images = slider.querySelectorAll("img");
+            let imageIndex = 0;
+            let sliderInterval;
+
+            function showNextImage() {
+                images.forEach(img => img.style.opacity = "0");
+                images[imageIndex].style.opacity = "1";
+                imageIndex = (imageIndex + 1) % images.length;
+            }
+
+            function startSlider() {
+                sliderInterval = setInterval(showNextImage, 2000);
+            }
+
+            function stopSlider() {
+                clearInterval(sliderInterval);
+            }
+
+            // Start the slider when the cursor enters
+            slider.addEventListener("mouseenter", startSlider);
+
+            // Stop the slider when the cursor leaves
+            slider.addEventListener("mouseleave", stopSlider);
+
+            // Start the slider immediately on page load (this line is causing automatic sliding)
+            startSlider();
+        });
+    }
+
+
+    startImageSlider();
 });
