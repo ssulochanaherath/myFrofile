@@ -247,7 +247,8 @@ section {
 /* Show Active Project */
 .project-item.active {
     opacity: 1;
-    position: relative;
+    transform: scale(1) translateX(0);
+    z-index: 2;
 }
 
 /* Image Slider */
@@ -323,7 +324,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    border-radius: 50%; /* Makes buttons circular */
+    border-radius: 50%;
 }
 
 .left-btn { left: 10px; }
@@ -575,10 +576,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    transform-origin: center;
+    transform: scale(0.8) translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 1;
 }
 
 /* Slide-in and out animations */
