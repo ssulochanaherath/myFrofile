@@ -103,10 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
         showProject(currentIndex);
     });
 
-    // Show first project on page load
     showProject(currentIndex);
 
-    // Image Slider inside Each Project
     function startImageSlider() {
         document.querySelectorAll(".image-slider").forEach(slider => {
             let images = slider.querySelectorAll("img");
@@ -127,46 +125,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 clearInterval(sliderInterval);
             }
 
-            // Start the slider when the cursor enters
             slider.addEventListener("mouseenter", startSlider);
-
-            // Stop the slider when the cursor leaves
             slider.addEventListener("mouseleave", stopSlider);
-
-            // Start the slider immediately on page load
-            startSlider();
-        });
-    }function startImageSlider() {
-        document.querySelectorAll(".image-slider").forEach(slider => {
-            let images = slider.querySelectorAll("img");
-            let imageIndex = 0;
-            let sliderInterval;
-
-            function showNextImage() {
-                images.forEach(img => img.style.opacity = "0");
-                images[imageIndex].style.opacity = "1";
-                imageIndex = (imageIndex + 1) % images.length;
-            }
-
-            function startSlider() {
-                sliderInterval = setInterval(showNextImage, 2000);
-            }
-
-            function stopSlider() {
-                clearInterval(sliderInterval);
-            }
-
-            // Start the slider when the cursor enters
-            slider.addEventListener("mouseenter", startSlider);
-
-            // Stop the slider when the cursor leaves
-            slider.addEventListener("mouseleave", stopSlider);
-
-            // Start the slider immediately on page load (this line is causing automatic sliding)
             startSlider();
         });
     }
-
 
     startImageSlider();
 });
@@ -184,39 +147,33 @@ document.addEventListener("DOMContentLoaded", function () {
             project.classList.remove("active");
         });
 
-        // Reset the current project to normal view
         projects[index].style.transform = "scale(1) translateX(0)";
         projects[index].style.opacity = "1";
         projects[index].style.zIndex = "2";
         projects[index].classList.add("active");
 
-        // Slide-in animation for next/prev based on direction
         if (direction === "next") {
-            projects[index].style.transform = "translateX(100%)"; // Slide from right
+            projects[index].style.transform = "translateX(100%)";
             setTimeout(() => {
                 projects[index].style.transform = "translateX(0)";
             }, 10);
         } else if (direction === "prev") {
-            projects[index].style.transform = "translateX(-100%)"; // Slide from left
+            projects[index].style.transform = "translateX(-100%)";
             setTimeout(() => {
                 projects[index].style.transform = "translateX(0)";
             }, 10);
         }
     }
 
-    // Next Button
     document.querySelector(".right-btn").addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % projects.length;
         showProject(currentIndex, "next");
     });
 
-    // Previous Button
     document.querySelector(".left-btn").addEventListener("click", () => {
         currentIndex = (currentIndex - 1 + projects.length) % projects.length;
         showProject(currentIndex, "prev");
     });
 
-    // Show the first project initially
     showProject(currentIndex, "next");
 });
-
