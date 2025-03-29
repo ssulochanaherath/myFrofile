@@ -205,6 +205,7 @@ section {
     transform: scale(1.05);
     background-color: rgba(255, 255, 255, 0.08);
 }
+
 /* Full-Screen Project Section */
 #projects {
     position: relative;
@@ -566,3 +567,56 @@ footer {
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.project-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    transform-origin: center;
+}
+
+/* Slide-in and out animations */
+.slide-in-right {
+    animation: slideInRight 0.8s ease-in-out forwards;
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.8s ease-in-out forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-in-out forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.8s ease-in-out forwards;
+}
+
+/* Keyframes for the animation */
+@keyframes slideInRight {
+    from { transform: rotateY(-90deg); opacity: 0; }
+    to { transform: rotateY(0deg); opacity: 1; }
+}
+
+@keyframes slideOutLeft {
+    from { transform: rotateY(0deg); opacity: 1; }
+    to { transform: rotateY(90deg); opacity: 0; }
+}
+
+@keyframes slideInLeft {
+    from { transform: rotateY(90deg); opacity: 0; }
+    to { transform: rotateY(0deg); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+    from { transform: rotateY(0deg); opacity: 1; }
+    to { transform: rotateY(-90deg); opacity: 0; }
+}
+
+

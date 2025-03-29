@@ -170,3 +170,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     startImageSlider();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project-item");
+    let currentIndex = 0;
+
+    function showProject(index, direction) {
+        projects.forEach((project, i) => {
+            project.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+            project.style.transform = "scale(0.9) translateX(50%)";
+            project.style.opacity = "0.5";
+            project.style.zIndex = "1";
+            project.classList.remove("active");
+        });
+
+        // Add transition and reset to normal position
+        projects[index].style.transform = "scale(1) translateX(0)";
+        projects[index].style.opacity = "1";
+        projects[index].style.zIndex = "2";
+        projects[index].classList.add("active");
+    }
+
+    document.querySelector(".right-btn").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % projects.length;
+        showProject(currentIndex, "next");
+    });
+
+    document.querySelector(".left-btn").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+        showProject(currentIndex, "prev");
+    });
+
+    // Show first project on page load
+    showProject(currentIndex, "next");
+});
+
+
+
