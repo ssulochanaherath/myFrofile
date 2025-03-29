@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Show first project on page load
-    showProject(currentIndex, "next");
+    showProject(currentIndex, "prev");
 });
 
 
