@@ -259,7 +259,7 @@ section {
     display: flex;
     overflow: hidden;
     position: relative;
-    border-radius: 0; /* Removed the border-radius */
+    border-radius: 5px; /* Removed the border-radius */
 }
 
 .image-slider img {
