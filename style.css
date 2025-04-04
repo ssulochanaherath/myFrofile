@@ -243,6 +243,7 @@ section {
     transform: scale(0.8) translateX(100%); /* Start from right by default */
     transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: 1;
+    border-radius: 10px;
 }
 
 /* Show Active Project */
@@ -259,7 +260,7 @@ section {
     display: flex;
     overflow: hidden;
     position: relative;
-    border-radius: 5px; /* Removed the border-radius */
+    border-radius: 10px; /* Removed the border-radius */
 }
 
 .image-slider img {
