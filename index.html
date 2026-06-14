@@ -10,24 +10,34 @@
 </head>
 
 <body>
+    <div id="scroll-progress"></div>
+
     <div class="port">
 
-        <!-- NAV -->
+        <!-- NAV - Desktop -->
         <nav class="nav">
             <div class="nav-logo">S<span>.</span>sulochana</div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#technologies">Stack</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#technologies" class="nav-link">Stack</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
             <a href="assets/documents/Sangeeth_Sulochana.pdf" download style="text-decoration: none;">
                 <button class="nav-cta">Download CV</button>
             </a>
         </nav>
 
+        <!-- NAV - Mobile -->
+        <nav class="mobile-nav">
+            <a href="#about" class="mobile-link active"><i class="ti ti-user"></i></a>
+            <a href="#technologies" class="mobile-link"><i class="ti ti-layers-intersect"></i></a>
+            <a href="#projects" class="mobile-link"><i class="ti ti-briefcase"></i></a>
+            <a href="#contact" class="mobile-link"><i class="ti ti-message"></i></a>
+        </nav>
+
         <!-- HERO -->
-        <div class="hero">
+        <header class="hero" id="home">
             <div class="hero-badge">Available for work · Sri Lanka</div>
             <h1>Sangeeth<br><span class="accent">Sulochana.</span></h1>
             <p class="hero-sub">
@@ -45,7 +55,7 @@
                     <button class="btn-secondary">Let's talk →</button>
                 </a>
             </div>
-        </div>
+        </header>
 
         <!-- STATS -->
         <div class="stats">
@@ -64,7 +74,7 @@
         </div>
 
         <!-- ABOUT -->
-        <div id="about" class="section">
+        <section id="about" class="section">
             <div class="section-eyebrow">Who I am</div>
             <div class="section-title">Building experiences <span class="muted">people love</span></div>
             <div class="about-grid">
@@ -86,47 +96,47 @@
                     <div class="skill-row">
                         <div class="skill-top"><span>Frontend / React</span><span>90%</span></div>
                         <div class="skill-bar">
-                            <div class="skill-fill" style="width:90%"></div>
+                            <div class="skill-fill" data-percent="90"></div>
                         </div>
                     </div>
                     <div class="skill-row">
                         <div class="skill-top"><span>UI / UX Design</span><span>85%</span></div>
                         <div class="skill-bar">
-                            <div class="skill-fill" style="width:85%"></div>
+                            <div class="skill-fill" data-percent="85"></div>
                         </div>
                     </div>
                     <div class="skill-row">
                         <div class="skill-top"><span>Node.js / Backend</span><span>75%</span></div>
                         <div class="skill-bar">
-                            <div class="skill-fill" style="width:75%"></div>
+                            <div class="skill-fill" data-percent="75"></div>
                         </div>
                     </div>
                     <div class="skill-row">
                         <div class="skill-top"><span>TypeScript</span><span>70%</span></div>
                         <div class="skill-bar">
-                            <div class="skill-fill" style="width:70%"></div>
+                            <div class="skill-fill" data-percent="70"></div>
                         </div>
                     </div>
                     <div class="skill-row">
                         <div class="skill-top"><span>MySQL / Databases</span><span>65%</span></div>
                         <div class="skill-bar">
-                            <div class="skill-fill" style="width:65%"></div>
+                            <div class="skill-fill" data-percent="65"></div>
                         </div>
                     </div>
                     <div class="skill-row">
                         <div class="skill-top"><span>React Native</span><span>60%</span></div>
                         <div class="skill-bar">
-                            <div class="skill-fill" style="width:60%"></div>
+                            <div class="skill-fill" data-percent="60"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="divider"></div>
 
         <!-- TECH STACK -->
-        <div id="technologies" class="section">
+        <section id="technologies" class="section">
             <div class="section-eyebrow">Tech Stack</div>
             <div class="section-title">Tools of the <span class="muted">trade</span></div>
             <div class="tech-grid">
@@ -163,45 +173,45 @@
                     <div class="tech-name">JavaScript</div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="divider"></div>
 
         <!-- PROJECTS -->
-        <div id="projects" class="section">
+        <section id="projects" class="section">
             <div class="section-eyebrow">Work</div>
             <div class="section-title">Selected <span class="muted">projects</span></div>
             <div class="projects-grid">
 
                 <div class="project-card featured">
-                    <div>
+                    <div class="project-info">
                         <div class="project-tag">Featured · Full Stack</div>
                         <div class="project-name">Online Ticket Booking</div>
-                        <p class="project-desc">A complete ticket booking platform with real-time availability, secure payments flow, and an intuitive booking experience from browse to confirmation.</p>
+                        <p class="project-desc">A complete ticket booking platform with real-time availability, secure payments flow, and an intuitive booking experience.</p>
                         <div class="project-stack">
                             <span class="stack-tag">React</span>
                             <span class="stack-tag">Node.js</span>
                             <span class="stack-tag">MySQL</span>
                         </div>
                         <a class="project-link" href="https://github.com/ssulochanaherath/Ticket_Booking_Backend.git" target="_blank">
-                            View on GitHub <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                            View on GitHub <i class="ti ti-arrow-up-right"></i>
                         </a>
                     </div>
                     <div class="project-visual">
-                        <div class="project-visual-icon">🎫</div>
+                        <span>🎫</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-tag">Full Stack</div>
                     <div class="project-name">Hotel Booking System</div>
-                    <p class="project-desc">Room discovery, booking management, and a polished customer-facing interface for a hotel reservation experience.</p>
+                    <p class="project-desc">Room discovery, booking management, and a polished customer-facing interface.</p>
                     <div class="project-stack">
                         <span class="stack-tag">React</span>
                         <span class="stack-tag">MySQL</span>
                     </div>
                     <a class="project-link" href="https://github.com/ssulochanaherath/hotel_booking" target="_blank">
-                        View on GitHub <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                        View on GitHub <i class="ti ti-arrow-up-right"></i>
                     </a>
                 </div>
 
@@ -214,47 +224,47 @@
                         <span class="stack-tag">CSS3</span>
                     </div>
                     <a class="project-link" href="https://github.com/ssulochanaherath/web_frontend.git" target="_blank">
-                        View on GitHub <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                        View on GitHub <i class="ti ti-arrow-up-right"></i>
                     </a>
                 </div>
 
-                <div class="project-card" style="grid-column: span 2;">
+                <div class="project-card featured" style="grid-column: span 1; display: flex; flex-direction: column;">
                     <div class="project-tag">Full Stack</div>
-                    <div class="project-name">Flavor Exchange — Recipe Sharing</div>
-                    <p class="project-desc">A community platform where food lovers discover, share, and save recipes. Built with a focus on smooth UX and a beautiful presentation of culinary content.</p>
+                    <div class="project-name">Flavor Exchange</div>
+                    <p class="project-desc">A community platform where food lovers discover, share, and save recipes. Built with a focus on smooth UX.</p>
                     <div class="project-stack">
                         <span class="stack-tag">React</span>
                         <span class="stack-tag">Node.js</span>
                         <span class="stack-tag">MySQL</span>
                     </div>
                     <a class="project-link" href="https://github.com/ssulochanaherath/recipe_exchange.git" target="_blank">
-                        View on GitHub <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                        View on GitHub <i class="ti ti-arrow-up-right"></i>
                     </a>
                 </div>
 
             </div>
-        </div>
+        </section>
 
         <div class="divider"></div>
 
         <!-- CONTACT -->
-        <div id="contact" class="section">
+        <section id="contact" class="section">
             <div class="section-eyebrow">Contact</div>
             <div class="section-title">Let's build <span class="muted">something great</span></div>
             <div class="contact-grid">
                 <div>
-                    <p class="contact-desc">I'm open to internships, freelance work, and exciting collaborations. If you have an idea or an opportunity, reach out — I'd love to hear from you.</p>
+                    <p class="contact-desc">I'm open to internships, freelance work, and exciting collaborations. Reach out — I'd love to hear from you.</p>
                     <div class="contact-links">
                         <a class="contact-item" href="mailto:ssulochanaherath@gmail.com">
-                            <div class="contact-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+                            <div class="contact-icon"><i class="ti ti-mail"></i></div>
                             ssulochanaherath@gmail.com
                         </a>
                         <a class="contact-item" href="https://linkedin.com/in/yourprofile" target="_blank">
-                            <div class="contact-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+                            <div class="contact-icon"><i class="ti ti-brand-linkedin"></i></div>
                             LinkedIn Profile
                         </a>
                         <a class="contact-item" href="https://github.com/ssulochanaherath" target="_blank">
-                            <div class="contact-icon"><i class="ti ti-brand-github" aria-hidden="true"></i></div>
+                            <div class="contact-icon"><i class="ti ti-brand-github"></i></div>
                             github.com/ssulochanaherath
                         </a>
                     </div>
@@ -271,18 +281,17 @@
                             <textarea name="message" placeholder="Tell me about your project..." required></textarea>
                         </div>
                         <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
-                            Send message <i class="ti ti-send" aria-hidden="true"></i>
+                            Send message <i class="ti ti-send"></i>
                         </button>
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- FOOTER -->
-        <div class="footer">
+        <footer class="footer">
             <div class="footer-copy">© 2025 Sangeeth Sulochana. All rights reserved.</div>
-            <div class="footer-logo">S<span>.</span></div>
-        </div>
+        </footer>
 
     </div>
 
