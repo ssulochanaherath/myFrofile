@@ -4,295 +4,170 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sangeeth Sulochana | Portfolio</title>
+    <title>Sangeeth Sulochana | Portfolio Road Trip</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 
 <body>
-    <div id="scroll-progress"></div>
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-logo">S<span>.</span>sulochana</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#technologies" class="nav-link">Stack</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <a href="assets/documents/Sangeeth_Sulochana.pdf" download style="text-decoration: none;">
+            <button class="nav-cta">Download CV</button>
+        </a>
+    </nav>
 
-    <div class="port">
+    <!-- 3D WORLD -->
+    <div class="world" id="world">
+        <div class="road"></div>
 
-        <!-- NAV - Desktop -->
-        <nav class="nav">
-            <div class="nav-logo">S<span>.</span>sulochana</div>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#technologies" class="nav-link">Stack</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <a href="assets/documents/Sangeeth_Sulochana.pdf" download style="text-decoration: none;">
-                <button class="nav-cta">Download CV</button>
-            </a>
-        </nav>
-
-        <!-- NAV - Mobile -->
-        <nav class="mobile-nav">
-            <a href="#about" class="mobile-link active"><i class="ti ti-user"></i></a>
-            <a href="#technologies" class="mobile-link"><i class="ti ti-layers-intersect"></i></a>
-            <a href="#projects" class="mobile-link"><i class="ti ti-briefcase"></i></a>
-            <a href="#contact" class="mobile-link"><i class="ti ti-message"></i></a>
-        </nav>
-
-        <!-- HERO -->
-        <header class="hero" id="home">
-            <div class="hero-badge">Available for work · Sri Lanka</div>
-            <h1>Sangeeth<br><span class="accent">Sulochana.</span></h1>
-            <p class="hero-sub">
-                <span>Software engineering student</span> building delightful full-stack experiences —
-                React, Node.js, TypeScript & beyond.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" style="text-decoration: none;">
-                    <button class="btn-primary">
-                        <i class="ti ti-briefcase" aria-hidden="true"></i>
-                        View Projects
-                    </button>
-                </a>
-                <a href="#contact" style="text-decoration: none;">
-                    <button class="btn-secondary">Let's talk →</button>
-                </a>
-            </div>
-        </header>
-
-        <!-- STATS -->
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-num">4<span>+</span></div>
-                <div class="stat-label">Projects shipped</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">8<span>+</span></div>
-                <div class="stat-label">Technologies mastered</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">2<span>yrs</span></div>
-                <div class="stat-label">Deep in the craft</div>
+        <!-- STOPS -->
+        
+        <!-- HOME STOP -->
+        <div id="home" class="stop active">
+            <div class="billboard-frame">
+                <header class="hero">
+                    <div class="hero-badge">Available for work · Sri Lanka</div>
+                    <h1>Sangeeth<br><span class="accent">Sulochana.</span></h1>
+                    <p class="hero-sub">
+                        <span>Software engineering student</span> building delightful full-stack experiences —
+                        React, Node.js, TypeScript & beyond.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn-primary" onclick="driveTo('#projects')">
+                            <i class="ti ti-briefcase" aria-hidden="true"></i>
+                            View Projects
+                        </button>
+                        <button class="btn-secondary" onclick="driveTo('#contact')">Let's talk →</button>
+                    </div>
+                </header>
             </div>
         </div>
 
-        <!-- ABOUT -->
-        <section id="about" class="section">
-            <div class="section-eyebrow">Who I am</div>
-            <div class="section-title">Building experiences <span class="muted">people love</span></div>
-            <div class="about-grid">
-                <div>
-                    <p class="about-text">
-                        I'm a software engineering student with a deep obsession for UI/UX design. I believe great software isn't just functional — it's felt. Every pixel, every interaction, every transition matters.
-                    </p>
-                    <p class="about-text">
-                        I specialize in React and frontend systems, with a solid grip on backend technologies like Node.js and MySQL. Currently studying at IJSE pursuing a BSc (Hons) in Computer Science.
-                    </p>
-                    <div class="about-edu">
-                        <span class="edu-badge">Education</span>
-                        <div class="edu-degree">BSc (Hons) Computer Science</div>
-                        <div class="edu-inst">GDSE — IJSE, Institute of Software Engineering</div>
-                        <div class="edu-year">2023 — Present</div>
-                    </div>
-                </div>
-                <div class="skills-list">
-                    <div class="skill-row">
-                        <div class="skill-top"><span>Frontend / React</span><span>90%</span></div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-percent="90"></div>
+        <!-- ABOUT STOP -->
+        <div id="about" class="stop">
+            <div class="billboard-frame">
+                <section class="section">
+                    <div class="section-eyebrow">Who I am</div>
+                    <div class="section-title">Building experiences <span class="muted">people love</span></div>
+                    <div class="about-grid">
+                        <div class="about-info">
+                            <p class="about-text">
+                                I'm a software engineering student with a deep obsession for UI/UX design. I believe great software isn't just functional — it's felt.
+                            </p>
+                            <div class="about-edu">
+                                <span class="edu-badge">Education</span>
+                                <div class="edu-degree" style="color: #fff; font-weight: 600; margin-top: 10px;">BSc (Hons) Computer Science</div>
+                                <div class="edu-inst" style="color: var(--text-muted); font-size: 14px;">GDSE — IJSE</div>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-row">
+                                <div class="skill-top"><span>Frontend / React</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-top"><span>UI / UX Design</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-top"><span>Node.js / Backend</span><span>75%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span>UI / UX Design</span><span>85%</span></div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-percent="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span>Node.js / Backend</span><span>75%</span></div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-percent="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span>TypeScript</span><span>70%</span></div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-percent="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span>MySQL / Databases</span><span>65%</span></div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-percent="65"></div>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-top"><span>React Native</span><span>60%</span></div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" data-percent="60"></div>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
 
-        <div class="divider"></div>
-
-        <!-- TECH STACK -->
-        <section id="technologies" class="section">
-            <div class="section-eyebrow">Tech Stack</div>
-            <div class="section-title">Tools of the <span class="muted">trade</span></div>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <span class="tech-icon">⚛️</span>
-                    <div class="tech-name">React</div>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-icon">🔷</span>
-                    <div class="tech-name">TypeScript</div>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-icon">🟢</span>
-                    <div class="tech-name">Node.js</div>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-icon">🎨</span>
-                    <div class="tech-name">CSS3</div>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-icon">📱</span>
-                    <div class="tech-name">React Native</div>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-icon">🗄️</span>
-                    <div class="tech-name">MySQL</div>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-icon">🌐</span>
-                    <div class="tech-name">HTML5</div>
-                </div>
-                <div class="tech-card">
-                    <span class="tech-icon">🟡</span>
-                    <div class="tech-name">JavaScript</div>
-                </div>
+        <!-- TECH STOP -->
+        <div id="technologies" class="stop">
+            <div class="billboard-frame">
+                <section class="section">
+                    <div class="section-eyebrow">Tech Stack</div>
+                    <div class="section-title">Tools of the <span class="muted">trade</span></div>
+                    <div class="tech-grid">
+                        <div class="tech-card"><span class="tech-icon">⚛️</span><div class="tech-name">React</div></div>
+                        <div class="tech-card"><span class="tech-icon">🔷</span><div class="tech-name">TypeScript</div></div>
+                        <div class="tech-card"><span class="tech-icon">🟢</span><div class="tech-name">Node.js</div></div>
+                        <div class="tech-card"><span class="tech-icon">🎨</span><div class="tech-name">CSS3</div></div>
+                        <div class="tech-card"><span class="tech-icon">📱</span><div class="tech-name">React Native</div></div>
+                        <div class="tech-card"><span class="tech-icon">🗄️</span><div class="tech-name">MySQL</div></div>
+                        <div class="tech-card"><span class="tech-icon">🌐</span><div class="tech-name">HTML5</div></div>
+                        <div class="tech-card"><span class="tech-icon">🟡</span><div class="tech-name">JavaScript</div></div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
 
-        <div class="divider"></div>
-
-        <!-- PROJECTS -->
-        <section id="projects" class="section">
-            <div class="section-eyebrow">Work</div>
-            <div class="section-title">Selected <span class="muted">projects</span></div>
-            <div class="projects-grid">
-
-                <div class="project-card featured">
-                    <div class="project-info">
-                        <div class="project-tag">Featured · Full Stack</div>
-                        <div class="project-name">Online Ticket Booking</div>
-                        <p class="project-desc">A complete ticket booking platform with real-time availability, secure payments flow, and an intuitive booking experience.</p>
-                        <div class="project-stack">
-                            <span class="stack-tag">React</span>
-                            <span class="stack-tag">Node.js</span>
-                            <span class="stack-tag">MySQL</span>
+        <!-- PROJECTS STOP -->
+        <div id="projects" class="stop">
+            <div class="billboard-frame">
+                <section class="section">
+                    <div class="section-eyebrow">Work</div>
+                    <div class="section-title">Selected <span class="muted">projects</span></div>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-tag">Featured · Full Stack</div>
+                            <div class="project-name">Online Ticket Booking</div>
+                            <a class="project-link" href="https://github.com/ssulochanaherath/Ticket_Booking_Backend.git" target="_blank">View GitHub <i class="ti ti-arrow-up-right"></i></a>
                         </div>
-                        <a class="project-link" href="https://github.com/ssulochanaherath/Ticket_Booking_Backend.git" target="_blank">
-                            View on GitHub <i class="ti ti-arrow-up-right"></i>
-                        </a>
+                        <div class="project-card">
+                            <div class="project-tag">Full Stack</div>
+                            <div class="project-name">Hotel Booking</div>
+                            <a class="project-link" href="https://github.com/ssulochanaherath/hotel_booking" target="_blank">View GitHub <i class="ti ti-arrow-up-right"></i></a>
+                        </div>
                     </div>
-                    <div class="project-visual">
-                        <span>🎫</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-tag">Full Stack</div>
-                    <div class="project-name">Hotel Booking System</div>
-                    <p class="project-desc">Room discovery, booking management, and a polished customer-facing interface.</p>
-                    <div class="project-stack">
-                        <span class="stack-tag">React</span>
-                        <span class="stack-tag">MySQL</span>
-                    </div>
-                    <a class="project-link" href="https://github.com/ssulochanaherath/hotel_booking" target="_blank">
-                        View on GitHub <i class="ti ti-arrow-up-right"></i>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-tag">Frontend</div>
-                    <div class="project-name">Music Dashboard</div>
-                    <p class="project-desc">A visually rich music interface with custom controls, playlists, and a design that puts music front and center.</p>
-                    <div class="project-stack">
-                        <span class="stack-tag">JavaScript</span>
-                        <span class="stack-tag">CSS3</span>
-                    </div>
-                    <a class="project-link" href="https://github.com/ssulochanaherath/web_frontend.git" target="_blank">
-                        View on GitHub <i class="ti ti-arrow-up-right"></i>
-                    </a>
-                </div>
-
-                <div class="project-card featured" style="grid-column: span 1; display: flex; flex-direction: column;">
-                    <div class="project-tag">Full Stack</div>
-                    <div class="project-name">Flavor Exchange</div>
-                    <p class="project-desc">A community platform where food lovers discover, share, and save recipes. Built with a focus on smooth UX.</p>
-                    <div class="project-stack">
-                        <span class="stack-tag">React</span>
-                        <span class="stack-tag">Node.js</span>
-                        <span class="stack-tag">MySQL</span>
-                    </div>
-                    <a class="project-link" href="https://github.com/ssulochanaherath/recipe_exchange.git" target="_blank">
-                        View on GitHub <i class="ti ti-arrow-up-right"></i>
-                    </a>
-                </div>
-
+                </section>
             </div>
-        </section>
+        </div>
 
-        <div class="divider"></div>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section">
-            <div class="section-eyebrow">Contact</div>
-            <div class="section-title">Let's build <span class="muted">something great</span></div>
-            <div class="contact-grid">
-                <div>
-                    <p class="contact-desc">I'm open to internships, freelance work, and exciting collaborations. Reach out — I'd love to hear from you.</p>
-                    <div class="contact-links">
-                        <a class="contact-item" href="mailto:ssulochanaherath@gmail.com">
-                            <div class="contact-icon"><i class="ti ti-mail"></i></div>
-                            ssulochanaherath@gmail.com
-                        </a>
-                        <a class="contact-item" href="https://linkedin.com/in/yourprofile" target="_blank">
-                            <div class="contact-icon"><i class="ti ti-brand-linkedin"></i></div>
-                            LinkedIn Profile
-                        </a>
-                        <a class="contact-item" href="https://github.com/ssulochanaherath" target="_blank">
-                            <div class="contact-icon"><i class="ti ti-brand-github"></i></div>
-                            github.com/ssulochanaherath
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <form action="https://formspree.io/f/xovenvrz" method="POST">
-                        <div class="form-group">
+        <!-- CONTACT STOP -->
+        <div id="contact" class="stop">
+            <div class="billboard-frame">
+                <section class="section">
+                    <div class="section-eyebrow">Contact</div>
+                    <div class="section-title">Let's build <span class="muted">something great</span></div>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <p class="about-text">Open to internships and freelance work.</p>
+                            <a class="contact-item" href="mailto:ssulochanaherath@gmail.com"><i class="ti ti-mail"></i> ssulochanaherath@gmail.com</a>
+                            <a class="contact-item" href="#"><i class="ti ti-brand-linkedin"></i> LinkedIn Profile</a>
+                        </div>
+                        <form class="contact-form" action="https://formspree.io/f/xovenvrz" method="POST">
                             <input type="text" name="name" placeholder="Your name" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="your@email.com" required />
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
-                            Send message <i class="ti ti-send"></i>
-                        </button>
-                    </form>
-                </div>
+                            <textarea name="message" placeholder="Your message" required></textarea>
+                            <button type="submit" class="btn-primary">Send Message <i class="ti ti-send"></i></button>
+                        </form>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="footer-copy">© 2025 Sangeeth Sulochana. All rights reserved.</div>
-        </footer>
-
+    <!-- CAR -->
+    <div class="car-container">
+        <svg class="car" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body -->
+            <rect x="20" y="45" width="160" height="55" rx="12" fill="#1a1c25" />
+            <rect x="40" y="25" width="120" height="40" rx="10" fill="#11131a" />
+            <!-- Rear Window -->
+            <rect x="50" y="30" width="100" height="25" rx="4" fill="#2d3142" />
+            <!-- Lights -->
+            <rect class="tail-light" x="30" y="65" width="25" height="12" rx="4" />
+            <rect class="tail-light" x="145" y="65" width="25" height="12" rx="4" />
+            <!-- Plate -->
+            <rect x="85" y="80" width="30" height="15" rx="2" fill="#3a4058" />
+            <rect x="88" y="83" width="24" height="9" rx="1" fill="#11131a" />
+        </svg>
     </div>
 
     <script src="script.js"></script>
