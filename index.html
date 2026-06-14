@@ -4,216 +4,173 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sangeeth Sulochana - Portfolio</title>
+    <title>Sangeeth Sulochana | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body>
-<!-- Header Section -->
-<header>
-    <div class="container header-flex">
-        <div class="header-content">
-            <h1 class="typewriter-text">Sangeeth Sulochana</h1>
-            <p>Software Engineering Student · Full-Stack Developer</p>
+    <!-- Header Section -->
+    <header id="top">
+        <div class="container header-flex">
+            <div class="header-content">
+                <h1 id="typewriter">Sangeeth Sulochana</h1>
+                <p>Software Engineering Student · Full-Stack Developer</p>
+            </div>
+            <div class="header-photo">
+                <img src="assets/minec.jpg" alt="Sangeeth Sulochana" />
+            </div>
         </div>
-        <div class="header-photo">
-            <img src="assets/minec.jpg" alt="Sangeeth Sulochana Photo" />
-        </div>
-    </div>
-</header>
+    </header>
 
-<!-- Navigation Bar -->
-<nav id="navbar">
-    <div class="navbar-container">
+    <!-- Floating Navigation -->
+    <nav id="navbar">
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#technologies">Technologies</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#technologies">Skills</a></li>
+            <li><a href="#projects">Work</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="navbar-photo">
-            <a href="#top" aria-label="Go to top">
-                <img src="assets/minec.jpg" alt="Sangeeth Sulochana Photo" />
-            </a>
-        </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- About Section -->
-<section id="about" class="fade-in">
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-        Hello! I'm Sangeeth Sulochana, a passionate software engineering student with a love for UI/UX design. I
-        specialize in creating user-friendly and visually appealing interfaces. I enjoy working on frontend
-        technologies like React, CSS, and JavaScript, and I have experience with backend technologies like Node.js and MySQL. I believe in creating seamless user experiences through thoughtful design and clean code.
-    </p>
-
-    <br>
-    <br>
-    <div class="education-container">
-        <div class="education-item">
-            <h3 class="education-degree">GDSE - BSc (Hons) in Computer Science</h3>
-            <p class="education-institute">IJSE - Institute of Software Engineering</p>
-            <p class="education-duration">2023 – Present</p>
-            <p class="education-details">
-                Relevant coursework: Web Development, UI/UX Design, Data Structures & Algorithms, Database Systems, Software Engineering Principles.
-            </p>
-        </div>
-    </div>
-
-    <!-- Download CV Button -->
-    <div class="cv-download">
-        <a href="assets/documents/Sangeeth_Sulochana.pdf" download class="download-btn">Download My CV</a>
-    </div>
-
-</section>
-
-<!-- Technologies Section -->
-<section id="technologies" class="fade-in">
-    <h2 class="section-title">Technologies & Languages</h2>
-    <div class="tech-list">
-        <div class="tech-item">
-            <i class="fab fa-html5 fa-3x"></i>
-            <p>HTML5</p>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-css3-alt fa-3x"></i>
-            <p>CSS3</p>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-js-square fa-3x"></i>
-            <p>JavaScript</p>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-react fa-3x"></i>
-            <p>React</p>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-node fa-3x"></i>
-            <p>Node.js</p>
-        </div>
-        <div class="tech-item">
-            <i class="fas fa-code fa-3x"></i>
-            <p>TypeScript</p>
-        </div>
-        <div class="tech-item">
-            <i class="fab fa-react fa-3x"></i>
-            <p>React Native</p>
-        </div>
-        <div class="tech-item">
-            <i class="fas fa-database fa-3x"></i>
-            <p>MySQL</p>
-        </div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="fade-in">
-    <h2 class="section-title">My Projects</h2>
-    <div class="project-container">
-        <button class="scroll-btn left-btn">◀</button>
-        <div class="project-list">
-            <!-- Ticket Booking Project -->
-            <div class="project-item active">
-                <div class="image-slider">
-                    <img src="assets/ticket1.png" alt="Ticket Booking">
-                    <img src="assets/ticket2.png" alt="Ticket Booking">
-                    <img src="assets/ticket3.png" alt="Ticket Booking">
-                    <img src="assets/ticket4.png" alt="Ticket Booking">
-                </div>
-                <div class="overlay">
-                    <h2>Online Ticket Booking</h2>
-                    <a href="https://github.com/ssulochanaherath/Ticket_Booking_Backend.git" target="_blank">View Project</a>
+    <main class="container">
+        <!-- About Section -->
+        <section id="about" class="fade-in">
+            <h2 class="section-title">The Story</h2>
+            <div class="glass-card">
+                <p>
+                    Hello! I'm Sangeeth Sulochana, a passionate software engineering student with a deep focus on UI/UX design. I specialize in creating user-centric, visually stunning interfaces that provide seamless digital experiences.
+                </p>
+                <br>
+                <p>
+                    Currently pursuing <strong>GDSE - BSc (Hons) in Computer Science</strong> at IJSE, I'm mastering the art of full-stack development, from robust backend systems to pixel-perfect frontends.
+                </p>
+                <div style="margin-top: 2rem; display: flex; justify-content: center;">
+                    <a href="assets/documents/Sangeeth_Sulochana.pdf" download class="contact-form" style="text-decoration: none;">
+                        <button type="button" style="padding: 0.8rem 2rem;">Download Resume</button>
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <!-- Hotel Booking Project -->
-            <div class="project-item">
-                <div class="image-slider">
-                    <img src="assets/hotel1.png" alt="Hotel Booking">
-                    <img src="assets/hotel2.png" alt="Hotel Booking">
-                    <img src="assets/hotel3.png" alt="Hotel Booking">
+        <!-- Technologies Section -->
+        <section id="technologies" class="fade-in">
+            <h2 class="section-title">Core Stack</h2>
+            <div class="tech-list bento-grid">
+                <div class="glass-card tech-item bento-item large">
+                    <i class="fab fa-react" style="font-size: 4rem;"></i>
+                    <h3 style="margin-top: 1rem;">React</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">Building complex, high-performance web applications with modern React patterns.</p>
                 </div>
-                <div class="overlay">
-                    <h2>Hotel Booking System</h2>
-                    <a href="https://github.com/ssulochanaherath/hotel_booking" target="_blank">View Project</a>
+                <div class="glass-card tech-item bento-item medium">
+                    <i class="fab fa-node" style="font-size: 3rem;"></i>
+                    <h3 style="margin-top: 0.5rem;">Node.js</h3>
+                    <p style="text-align: center; color: var(--text-secondary);">Scalable backend architecture and API development.</p>
+                </div>
+                <div class="glass-card tech-item">
+                    <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="glass-card tech-item">
+                    <i class="fas fa-code"></i>
+                    <p>TypeScript</p>
+                </div>
+                <div class="glass-card tech-item">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="glass-card tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="glass-card tech-item">
+                    <i class="fas fa-database"></i>
+                    <p>MySQL</p>
+                </div>
+                <div class="glass-card tech-item">
+                    <i class="fab fa-github"></i>
+                    <p>Git</p>
                 </div>
             </div>
+        </section>
 
-            <!-- Music Dashboard Project -->
-            <div class="project-item">
-                <div class="image-slider">
-                    <img src="assets/music1.png" alt="Music Dashboard">
-                    <img src="assets/music2.png" alt="Music Dashboard">
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
+            <h2 class="section-title">Selected Works</h2>
+            <div class="project-container">
+                <!-- Ticket Booking -->
+                <div class="glass-card project-item">
+                    <div class="image-slider">
+                        <img src="assets/ticket1.png" alt="Ticket Booking">
+                        <img src="assets/ticket2.png" alt="Ticket Booking">
+                        <img src="assets/ticket3.png" alt="Ticket Booking">
+                    </div>
+                    <div class="overlay">
+                        <h2>Online Ticket Booking</h2>
+                        <a href="https://github.com/ssulochanaherath/Ticket_Booking_Backend.git" target="_blank">View Case Study</a>
+                    </div>
                 </div>
-                <div class="overlay">
-                    <h2>Music Dashboard</h2>
-                    <a href="https://github.com/ssulochanaherath/web_frontend.git" target="_blank">View Project</a>
+
+                <!-- Hotel Booking -->
+                <div class="glass-card project-item">
+                    <div class="image-slider">
+                        <img src="assets/hotel1.png" alt="Hotel Booking">
+                        <img src="assets/hotel2.png" alt="Hotel Booking">
+                        <img src="assets/hotel3.png" alt="Hotel Booking">
+                    </div>
+                    <div class="overlay">
+                        <h2>Hotel Booking System</h2>
+                        <a href="https://github.com/ssulochanaherath/hotel_booking" target="_blank">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Music Dashboard -->
+                <div class="glass-card project-item">
+                    <div class="image-slider">
+                        <img src="assets/music1.png" alt="Music Dashboard">
+                        <img src="assets/music2.png" alt="Music Dashboard">
+                    </div>
+                    <div class="overlay">
+                        <h2>Music Dashboard</h2>
+                        <a href="https://github.com/ssulochanaherath/web_frontend.git" target="_blank">Explore Code</a>
+                    </div>
+                </div>
+
+                <!-- Recipe App -->
+                <div class="glass-card project-item">
+                    <div class="image-slider">
+                        <img src="assets/recipe1.png" alt="Recipe Exchange">
+                        <img src="assets/recipe2.png" alt="Recipe Exchange">
+                        <img src="assets/recipe3.png" alt="Recipe Exchange">
+                    </div>
+                    <div class="overlay">
+                        <h2>Flavor Exchange</h2>
+                        <a href="https://github.com/ssulochanaherath/recipe_exchange.git" target="_blank">Live Demo</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Recipe Sharing App -->
-            <div class="project-item">
-                <div class="image-slider">
-                    <img src="assets/recipe1.png" alt="Recipe Exchange">
-                    <img src="assets/recipe2.png" alt="Recipe Exchange">
-                    <img src="assets/recipe3.png" alt="Recipe Exchange">
-                </div>
-                <div class="overlay">
-                    <h2>Flavor Exchange - Recipe Sharing</h2>
-                    <a href="https://github.com/ssulochanaherath/recipe_exchange.git" target="_blank">View Project</a>
-                </div>
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="glass-card">
+                <form action="https://formspree.io/f/xovenvrz" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Name" required />
+                    <input type="email" name="email" placeholder="Email" required />
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
+        </section>
+    </main>
 
-        </div>
+    <footer style="text-align: center; padding: 4rem 0; color: var(--text-secondary);">
+        <p>© 2025 Sangeeth Sulochana. Crafted with passion.</p>
+    </footer>
 
-        <button class="scroll-btn right-btn">▶</button>
-    </div>
-</section>
-
-
-
-
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="fade-in">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-info">
-        <a href="mailto:ssulochanaherath@gmail.com" class="contact-link" aria-label="Send an email to Sangeeth">
-            <i class="fas fa-envelope"></i>
-            ssulochanaherath@gmail.com
-        </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link" aria-label="LinkedIn Profile">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/yourusername" target="_blank" class="contact-link" aria-label="GitHub Profile">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-    </div>
-
-    <form action="https://formspree.io/f/xovenvrz" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>© 2025 Sangeeth Sulochana. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
