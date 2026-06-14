@@ -4,171 +4,182 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sangeeth Sulochana | Portfolio Road Trip</title>
+    <title>Sangeeth Sulochana | Software Engineer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 
 <body>
-    <!-- NAV -->
-    <nav class="nav">
-        <div class="nav-logo">S<span>.</span>sulochana</div>
-        <div class="nav-links">
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+        <nav class="nav">
             <a href="#home" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
-            <a href="#technologies" class="nav-link">Stack</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <a href="assets/documents/Sangeeth_Sulochana.pdf" download style="text-decoration: none;">
-            <button class="nav-cta">Download CV</button>
-        </a>
-    </nav>
-
-    <!-- 3D WORLD -->
-    <div class="world" id="world">
-        <div class="road"></div>
-
-        <!-- STOPS -->
-        
-        <!-- HOME STOP -->
-        <div id="home" class="stop active">
-            <div class="billboard-frame">
-                <header class="hero">
-                    <div class="hero-badge">Available for work · Sri Lanka</div>
-                    <h1>Sangeeth<br><span class="accent">Sulochana.</span></h1>
-                    <p class="hero-sub">
-                        <span>Software engineering student</span> building delightful full-stack experiences —
-                        React, Node.js, TypeScript & beyond.
-                    </p>
-                    <div class="hero-actions">
-                        <button class="btn-primary" onclick="driveTo('#projects')">
-                            <i class="ti ti-briefcase" aria-hidden="true"></i>
-                            View Projects
-                        </button>
-                        <button class="btn-secondary" onclick="driveTo('#contact')">Let's talk →</button>
-                    </div>
-                </header>
-            </div>
-        </div>
-
-        <!-- ABOUT STOP -->
-        <div id="about" class="stop">
-            <div class="billboard-frame">
-                <section class="section">
-                    <div class="section-eyebrow">Who I am</div>
-                    <div class="section-title">Building experiences <span class="muted">people love</span></div>
-                    <div class="about-grid">
-                        <div class="about-info">
-                            <p class="about-text">
-                                I'm a software engineering student with a deep obsession for UI/UX design. I believe great software isn't just functional — it's felt.
-                            </p>
-                            <div class="about-edu">
-                                <span class="edu-badge">Education</span>
-                                <div class="edu-degree" style="color: #fff; font-weight: 600; margin-top: 10px;">BSc (Hons) Computer Science</div>
-                                <div class="edu-inst" style="color: var(--text-muted); font-size: 14px;">GDSE — IJSE</div>
-                            </div>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-row">
-                                <div class="skill-top"><span>Frontend / React</span><span>90%</span></div>
-                                <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-                            </div>
-                            <div class="skill-row">
-                                <div class="skill-top"><span>UI / UX Design</span><span>85%</span></div>
-                                <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-                            </div>
-                            <div class="skill-row">
-                                <div class="skill-top"><span>Node.js / Backend</span><span>75%</span></div>
-                                <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- TECH STOP -->
-        <div id="technologies" class="stop">
-            <div class="billboard-frame">
-                <section class="section">
-                    <div class="section-eyebrow">Tech Stack</div>
-                    <div class="section-title">Tools of the <span class="muted">trade</span></div>
-                    <div class="tech-grid">
-                        <div class="tech-card"><span class="tech-icon">⚛️</span><div class="tech-name">React</div></div>
-                        <div class="tech-card"><span class="tech-icon">🔷</span><div class="tech-name">TypeScript</div></div>
-                        <div class="tech-card"><span class="tech-icon">🟢</span><div class="tech-name">Node.js</div></div>
-                        <div class="tech-card"><span class="tech-icon">🎨</span><div class="tech-name">CSS3</div></div>
-                        <div class="tech-card"><span class="tech-icon">📱</span><div class="tech-name">React Native</div></div>
-                        <div class="tech-card"><span class="tech-icon">🗄️</span><div class="tech-name">MySQL</div></div>
-                        <div class="tech-card"><span class="tech-icon">🌐</span><div class="tech-name">HTML5</div></div>
-                        <div class="tech-card"><span class="tech-icon">🟡</span><div class="tech-name">JavaScript</div></div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- PROJECTS STOP -->
-        <div id="projects" class="stop">
-            <div class="billboard-frame">
-                <section class="section">
-                    <div class="section-eyebrow">Work</div>
-                    <div class="section-title">Selected <span class="muted">projects</span></div>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-tag">Featured · Full Stack</div>
-                            <div class="project-name">Online Ticket Booking</div>
-                            <a class="project-link" href="https://github.com/ssulochanaherath/Ticket_Booking_Backend.git" target="_blank">View GitHub <i class="ti ti-arrow-up-right"></i></a>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-tag">Full Stack</div>
-                            <div class="project-name">Hotel Booking</div>
-                            <a class="project-link" href="https://github.com/ssulochanaherath/hotel_booking" target="_blank">View GitHub <i class="ti ti-arrow-up-right"></i></a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- CONTACT STOP -->
-        <div id="contact" class="stop">
-            <div class="billboard-frame">
-                <section class="section">
-                    <div class="section-eyebrow">Contact</div>
-                    <div class="section-title">Let's build <span class="muted">something great</span></div>
-                    <div class="contact-grid">
-                        <div class="contact-info">
-                            <p class="about-text">Open to internships and freelance work.</p>
-                            <a class="contact-item" href="mailto:ssulochanaherath@gmail.com"><i class="ti ti-mail"></i> ssulochanaherath@gmail.com</a>
-                            <a class="contact-item" href="#"><i class="ti ti-brand-linkedin"></i> LinkedIn Profile</a>
-                        </div>
-                        <form class="contact-form" action="https://formspree.io/f/xovenvrz" method="POST">
-                            <input type="text" name="name" placeholder="Your name" required />
-                            <textarea name="message" placeholder="Your message" required></textarea>
-                            <button type="submit" class="btn-primary">Send Message <i class="ti ti-send"></i></button>
-                        </form>
-                    </div>
-                </section>
-            </div>
-        </div>
+        </nav>
     </div>
 
-    <!-- CAR -->
-    <div class="car-container">
-        <svg class="car" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-            <!-- Body -->
-            <rect x="20" y="45" width="160" height="55" rx="12" fill="#1a1c25" />
-            <rect x="40" y="25" width="120" height="40" rx="10" fill="#11131a" />
-            <!-- Rear Window -->
-            <rect x="50" y="30" width="100" height="25" rx="4" fill="#2d3142" />
-            <!-- Lights -->
-            <rect class="tail-light" x="30" y="65" width="25" height="12" rx="4" />
-            <rect class="tail-light" x="145" y="65" width="25" height="12" rx="4" />
-            <!-- Plate -->
-            <rect x="85" y="80" width="30" height="15" rx="2" fill="#3a4058" />
-            <rect x="88" y="83" width="24" height="9" rx="1" fill="#11131a" />
-        </svg>
-    </div>
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero reveal">
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                Available for Full Stack positions
+            </div>
+            <h1>I'm <span>Sangeeth.</span></h1>
+            <p>Professional Full Stack Developer dedicated to building high-performance applications and high-fidelity user experiences.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            </div>
+        </section>
+
+        <!-- Bento Grid -->
+        <div id="about" class="bento-grid">
+            
+            <!-- About Card -->
+            <div class="card card-about reveal">
+                <div class="card-label">Who I am</div>
+                <h2 class="card-title">Driven by design and performance.</h2>
+                <p>I build modern digital experiences that bridge the gap between complex backend systems and intuitive frontend interfaces. Based in Sri Lanka, I specialize in full-stack engineering with a focus on scalable React applications and robust Node.js backends.</p>
+            </div>
+
+            <!-- Experience Card (Full Width in its row) -->
+            <div id="experience" class="card reveal" style="grid-column: span 2; grid-row: span 2;">
+                <div class="card-label">Experience</div>
+                <h2 class="card-title">Professional Journey</h2>
+                <div style="margin-top: 20px;">
+                    <div style="border-left: 1px solid var(--accent); padding-left: 20px; position: relative; margin-bottom: 24px;">
+                        <div style="width: 10px; height: 10px; background: var(--accent); border-radius: 50%; position: absolute; left: -5.5px; top: 5px;"></div>
+                        <h3 style="color: #fff; font-size: 16px;">Full Stack Developer</h3>
+                        <p style="color: var(--text-dim); font-size: 12px; margin-bottom: 8px;">Verse Labs • 2026 - Present</p>
+                        <p style="color: var(--text-secondary); font-size: 14px;">Lead developer for high-traffic web applications, focusing on React performance and backend scalability.</p>
+                    </div>
+                    <div style="border-left: 1px solid var(--text-dim); padding-left: 20px; position: relative;">
+                        <div style="width: 10px; height: 10px; background: var(--text-dim); border-radius: 50%; position: absolute; left: -5.5px; top: 5px;"></div>
+                        <h3 style="color: #fff; font-size: 16px;">Software Engineer - Intern</h3>
+                        <p style="color: var(--text-dim); font-size: 12px; margin-bottom: 8px;">SLT Mobitel • 2025 - 2026</p>
+                        <p style="color: var(--text-secondary); font-size: 14px;">Contributed to the development and maintenance of web applications, gaining hands-on experience in frontend and backend technologies while working in an agile team environment.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="card card-stat reveal">
+                <div class="stat-num">4+</div>
+                <div class="stat-label">Projects Shipped</div>
+            </div>
+            <div class="card card-stat reveal">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Years of Craft</div>
+            </div>
+
+            <!-- Tech Stack Card -->
+            <div id="stack" class="card card-tech reveal">
+                <div class="card-label">Tech Stack</div>
+                <h2 class="card-title">Modern Arsenal</h2>
+                <div class="tech-icons">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Tailwind</span>
+                    <span class="tech-tag">Framer Motion</span>
+                </div>
+            </div>
+
+            <!-- Projects Header -->
+            <div id="projects" class="card card-stat reveal" style="grid-column: span 1; text-align: left; align-items: flex-start;">
+                <div class="card-label">Portfolio</div>
+                <h2 class="card-title">Featured Work</h2>
+            </div>
+
+            <!-- Education Card -->
+            <div class="card card-stat reveal" style="grid-column: span 1; text-align: left; align-items: flex-start;">
+                <div class="card-label">Education</div>
+                <h2 class="card-title">BSc CS</h2>
+                <div class="stat-label">IJSE • 2023 - 2025</div>
+            </div>
+
+            <!-- Project Card 1 -->
+            <div class="card card-project reveal" data-images='["assets/ticket1.png", "assets/ticket2.png", "assets/ticket3.png", "assets/ticket4.png"]'>
+                <div class="card-label">Full Stack</div>
+                <h2 class="card-title">Online Ticket Booking</h2>
+                <p style="color: var(--text-secondary); font-size: 14px;">A complete ticket booking platform with real-time availability and secure payment flows.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ssulochanaherath/Ticket_Booking_Backend.git" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">GitHub →</a>
+                </div>
+                <div class="project-visual">
+                    <img src="assets/ticket1.png" alt="Online Ticket Booking" class="project-img">
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="card card-project reveal" data-images='["assets/music1.png", "assets/music2.png"]'>
+                <div class="card-label">Frontend</div>
+                <h2 class="card-title">Music Dashboard</h2>
+                <p style="color: var(--text-secondary); font-size: 14px;">A visually rich music interface with custom controls and a focus on sleek animations.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ssulochanaherath/web_frontend.git" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">GitHub →</a>
+                </div>
+                <div class="project-visual">
+                    <img src="assets/music1.png" alt="Music Dashboard" class="project-img">
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="card card-project reveal" data-images='["assets/hotel1.png", "assets/hotel2.png", "assets/hotel3.png"]'>
+                <div class="card-label">Full Stack</div>
+                <h2 class="card-title">Hotel Booking System</h2>
+                <p style="color: var(--text-secondary); font-size: 14px;">Room discovery and booking management with a polished customer-facing interface.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ssulochanaherath/hotel_booking" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">GitHub →</a>
+                </div>
+                <div class="project-visual">
+                    <img src="assets/hotel1.png" alt="Hotel Booking System" class="project-img">
+                </div>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="card card-project reveal" data-images='["assets/recipe1.png", "assets/recipe2.png", "assets/recipe3.png"]'>
+                <div class="card-label">Full Stack</div>
+                <h2 class="card-title">Flavor Exchange</h2>
+                <p style="color: var(--text-secondary); font-size: 14px;">A community platform for food lovers to discover, share, and save unique recipes.</p>
+                <div class="project-links">
+                    <a href="https://github.com/ssulochanaherath/recipe_exchange.git" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 12px;">GitHub →</a>
+                </div>
+                <div class="project-visual">
+                    <img src="assets/recipe1.png" alt="Flavor Exchange" class="project-img">
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div id="contact" class="card card-contact reveal">
+                <div class="contact-left">
+                    <div class="card-label">Get in touch</div>
+                    <h2 class="card-title" style="font-size: 32px;">Let's build something <span style="color: var(--accent-light);">great.</span></h2>
+                    <p style="color: var(--text-secondary); margin-top: 12px;">ssulochanaherath@gmail.com</p>
+                </div>
+                <div class="contact-right">
+                    <form class="contact-form" action="https://formspree.io/f/xovenvrz" method="POST">
+                        <input type="email" name="email" placeholder="Your email address" required />
+                        <button type="submit" class="btn btn-primary">Connect</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Sangeeth Sulochana. Crafted for the modern web.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
