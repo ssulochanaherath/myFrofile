@@ -428,42 +428,30 @@ body {
     }
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation - Scroll to Top Button */
 .nav-toggle {
     display: none;
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    font-size: 20px;
+    background: rgba(10, 10, 15, 0.8);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-size: 18px;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
+    border-radius: 50%;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 .mobile-menu {
     display: none;
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    right: 0;
-    background: rgba(10, 10, 15, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 12px;
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    flex-direction: column;
-    gap: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.mobile-menu.active {
-    display: flex;
-}
-
-.mobile-menu .nav-link {
-    padding: 12px 16px;
-    width: 100%;
-    border-radius: 8px;
 }
 
 @media (max-width: 640px) {
@@ -505,7 +493,9 @@ body {
         display: none !important;
     }
     .nav-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .hero {
         min-height: 80vh;
@@ -528,15 +518,7 @@ body {
     .card-project {
         min-height: 350px;
     }
-    .mobile-menu .nav-link {
-        font-size: 15px;
-        display: block !important;
-    }
     .nav {
         position: relative;
-    }
-    .mobile-menu {
-        position: absolute;
-        bottom: -180px;
     }
 }

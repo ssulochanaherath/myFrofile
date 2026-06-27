@@ -16,25 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorGlow.style.display = 'none';
     }
 
-    // 2. Mobile Menu Toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileNavLinks = document.querySelectorAll('.mobile-menu .nav-link');
+    // 2. Scroll to Top Button (Mobile)
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
 
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-
-    // Close mobile menu when link is clicked
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileMenu) {
-                mobileMenu.classList.remove('active');
-            }
-        });
-    });
 
     // 3. Reveal Animations (Intersection Observer)
     const observerOptions = {
