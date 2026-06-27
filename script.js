@@ -16,7 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorGlow.style.display = 'none';
     }
 
-    // 2. Reveal Animations (Intersection Observer)
+    // 2. Mobile Menu Toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-menu .nav-link');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    }
+
+    // Close mobile menu when link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // 3. Reveal Animations (Intersection Observer)
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -26,8 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Stop observing after reveal
-                // revealObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -35,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // 3. Active Nav Link Highlighting
+    // 4. Active Nav Link Highlighting
     const sections = document.querySelectorAll('section, .bento-grid > div[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -57,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Bento Card Interactions (Tilt & Image Switching)
+    // 5. Bento Card Interactions (Tilt & Image Switching)
     const cards = document.querySelectorAll('.card');
     
     if (window.matchMedia('(pointer: fine)').matches) {
